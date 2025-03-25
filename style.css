@@ -1,0 +1,242 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.slider {
+    position: absolute;
+    width: 300%;
+    height: 100%;
+    display: flex;
+}
+
+.slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.overlay h2 {
+    font-size: 2rem;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #ff4500;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Services */
+#services {
+    background: white;
+    padding: 50px;
+}
+
+.service-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.service {
+    background: #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    width: 30%;
+}
+
+/* Contact Form */
+#contact {
+    background: #333;
+    color: white;
+    padding: 40px;
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+form input, form textarea {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 10px 20px;
+    border: none;
+    background: #ff4500;
+    color: white;
+    border-radius: 5px;
+}
+
+/* Footer */
+footer {
+    background: black;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.whatsapp-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    z-index: 100;
+}
+
+.whatsapp-icon img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.whatsapp-icon img:hover {
+    transform: scale(1.1);
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+/* Slider container */
+.slider-container {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+/* Sliding images */
+.slider {
+    display: flex;
+    width: 100%; /* Twice the width for infinite scroll */
+    animation: slideAnimation 10s linear infinite;
+}
+
+/* Reduce image size */
+.slider img {
+    width: 33.33vw; /* Adjust based on screen size */
+    height: 300px;
+    object-fit: cover;
+}
+
+/* Continuous sliding animation */
+@keyframes slideAnimation {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* Make website responsive for mobile screens */
+@media screen and (max-width: 768px) {
+    /* Adjust hero section */
+    .hero {
+        height: 200px; /* Reduce height */
+    }
+
+    /* Make slider images fit properly */
+    .slider img {
+        width: 100vw; /* Full width on mobile */
+        height: auto;
+    }
+
+    /* Center text and buttons */
+    .overlay {
+        text-align: center;
+        padding: 10px;
+    }
+
+    .overlay h2 {
+        font-size: 20px; /* Smaller heading */
+    }
+
+    .overlay p {
+        font-size: 14px;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    /* Make form fields full width */
+    form input, form textarea {
+        width: 100%;
+    }
+
+    /* Reduce WhatsApp icon size */
+    .whatsapp-icon {
+        width: 40px;
+        height: 40px;
+        bottom: 10px;
+        right: 10px;
+    }
+}
